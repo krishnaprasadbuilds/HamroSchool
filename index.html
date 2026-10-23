@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HamroSchool School Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+
+    <!-- LOGIN -->
+    <section id="loginScreen" class="login-wrapper">
+
+        <div class="login-intro">
+            <div class="brand" style="color:white">🎓 HamroSchool</div>
+
+            <h1>School management, made simple.</h1>
+
+            <p>
+                Manage admissions, student details, attendance,
+                examination results and feedback in one place.
+            </p>
+
+            <p>
+                ✓ Student management<br>
+                ✓ Attendance records<br>
+                ✓ Examination results<br>
+                ✓ Student and parent portals
+            </p>
+        </div>
+
+        <div class="login-panel">
+
+            <div class="login-card">
+
+                <h2>Welcome back</h2>
+
+                <p class="muted">
+                    Sign in to your school account.
+                </p>
+
+                <div class="role-tabs">
+
+                    <button type="button" class="role-tab" data-role="student">
+                        🎓 Student
+                    </button>
+
+                    <button type="button" class="role-tab" data-role="parent">
+                        🏠 Parent
+                    </button>
+
+                    <button type="button" class="role-tab active" data-role="teacher">
+                        👑 Teacher / Admin
+                    </button>
+
+                </div>
+
+                <div id="loginMessage"></div>
+
+                <form id="loginForm">
+
+                    <div class="field">
+                        <label id="loginIdLabel" for="loginId">
+                            Teacher ID
+                        </label>
+
+                        <input id="loginId" required placeholder="Enter teacher ID" autocomplete="username">
+                    </div>
+
+                    <div class="field">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <input id="loginPassword" type="password" required placeholder="Enter password"
+                            autocomplete="current-password">
+
+                    </div>
+
+                    <button class="btn-primary full" type="submit">
+                        Sign In
+                    </button>
+
+                </form>
+
+                <div class="demo">
+
+                    <strong>Preset admin accounts</strong><br>
+
+                    Admin ID:
+                    <code>T1001</code>
+                    Password:
+                    <code>demo</code>
+
+                    <br>
+
+                    Admin ID:
+                    <code>T1002</code>
+                    Password:
+                    <code>demo</code>
+
+                </div>
+
+                <p class="muted small">
+                    Student ID is automatically created from
+                    Class + Roll Number.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPLICATION -->
+    <section id="appScreen" class="hidden">
+
+        <header>
+
+            <div class="brand">
+                🎓 HamroSchool
+            </div>
+
+            <div class="header-right">
+
+                <div id="userInfo"></div>
+
+                <button class="btn-secondary" id="logoutBtn" type="button">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+        <div class="app-layout">
+
+            <aside class="sidebar" id="sidebar">
+            </aside>
+
+            <main class="main-content" id="mainContent">
+            </main>
+
+        </div>
+
+        <footer>
+            HamroSchool School Management System · Local demo version
+        </footer>
+
+    </section>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
