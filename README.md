@@ -1,2 +1,2 @@
 # HamroSchool
-School management ystem
+School management System
